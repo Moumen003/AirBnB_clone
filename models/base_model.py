@@ -48,6 +48,6 @@ class BaseModel:
         dict_copy['__class__'] = self.__class__.__name__
         return dict_copy
 
-    @property
-    def id(self):
-        return self.id
+    #@property
+    #def id(self):
+    #    return self.id
