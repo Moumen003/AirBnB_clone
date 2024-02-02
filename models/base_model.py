@@ -27,7 +27,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())  # unique id
             self.created_at = datetime.now()  # datetime when is created
             self.updated_at = datetime.now()  # date when is updated
-            models.file_storage.new(self)
+            models.storage.new(self)
 
     def __str__(self):
         """ print() __str__ method """
@@ -38,7 +38,7 @@ class BaseModel:
     def save(self):
         """ updates with the current datetime """
         self.updated_at = datetime.now()
-        models.file_storage.save()
+        models.storage.save()
 
     def to_dict(self):
         '''returns a dictionary with all keys/value of the instance'''
